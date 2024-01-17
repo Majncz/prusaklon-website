@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+
+:root {
+    --background: #000000;
+    --accentColor: #FA6831;
+}
+
+*{
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+    color: white;
+}
+
+a {
+    text-decoration: none;
+}
+
+.cell {
+    background-color: #0D0D0D;
+    border-radius: 20px;
+    display: flex;
+    width: 100%;
+}
+
+main {
+    padding-top: 96px;
+    padding-bottom: 32px;
+    width: 100%;
+    min-height: 100vh;
+    background-color: var(--background);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main section.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.mainButton {
+    background-color: var(--accentColor);
+    color: black;
+    border: none;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 20px;
+    padding-left: 14px;
+    padding-right: 14px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    width: fit-content;
+    height: min-content;
+}
+
+.mainButton a {
+    color: black;
+}
+
+.pointerOnHover:hover {
+    cursor: pointer;
+}
+
+main article.heroSection h1,  main a.backButton {
+    color: var(--accentColor);
+    font-weight: 900;
+    width: 100%;
+}
+
+@media (min-width: 660px) {
+    .compHidden {
+        display: none;
+    }
+
+    main section.container {
+        gap: 80px;
+        width: 92%;
+        max-width: 1400px;
+    }
+
+    .cell {
+        padding-left: 80px;
+        padding-right: 80px;
+        padding: 80px;
+    }
+
+    .cell h2 {
+        font-weight: 700;
+        font-size: 30px;
+    }
+
+    main a.backButton {
+        font-size: 20px;
+    }
+}
+
+@media (min-width: 660px) and (max-width: 1090px) {
+    :root {
+        --cellHeight: 300px;
+        --cellPadding: 50px;
+    }
+    
+    main section.container {
+        gap: 50px;
+        max-width: 700px;
+        width: 92%;
+    }
+
+    .cell {
+        padding-left: var(--cellPadding);
+        padding-right: var(--cellPadding);
+        padding: 50px;
+    }
+}
+
+@media (max-width: 660px) {
+    .mobileHidden {
+        display: none;
+    }
+
+    main section.container {
+        width: 92%;
+        max-width: 380px;
+    }
+
+    nav > a {
+        display: flex;
+        align-items: center;
+    }
+    
+    nav > section > button.burger {
+        border: none;
+        background-color: rgba(255, 255, 255, 0);
+    }
+
+    .cell {
+        padding: 27px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .cell h2 {
+        font-weight: 700;
+        font-size: 30px;
+    }
+
+    main a.backButton {
+        font-size: 20px;
+    }
+}

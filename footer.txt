@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<footer>
+    <section>
+        <section class="logo">
+            <img src="./img/logo.svg" alt="logo">
+            <p>Prusa Klon</p>
+        </section>
+        <section class="social">
+            <a href=""><img src="./img/youtubeLogo.svg" alt="youtube logo"></a>
+            <a href=""><img src="./img/facebookLogo.svg" alt="facebook logo"></a>
+            <a href=""><img src="./img/instagramLogo.svg" alt="instagram logo"></a>
+            <a href=""><img src="./img/tiktokLogo.svg" alt="tiktok logo"></a>
+        </section>
+    </section>
+    <section>
+        <section class="links">
+            <p>Důležité odkazy</p>
+            <a href="#">Doprava a platba</a>
+            <a href="#">Obchodní podmínky</a>
+            <a href="#">Zásady ochrany osobních údajů</a>
+        </section>
+        <section class="textUs">
+            <p>Napište nám!</p>
+            <p>Pokud si nevíte rady, napište nám na <a href="mailto:info@prusaklon.cz">info@prusaklon.cz</a></p>
+        </section>
+        <p>Copyright © 2023 prusaklon | Všechna práva vyhrazena</p>
+    </section>
+</footer>

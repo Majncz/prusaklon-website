@@ -1,0 +1,22 @@
+<nav>
+  <a href="./index.html"><img src="img/logo.svg" alt="logo"></a>
+  <section class="navLinks mobileHidden">
+    <a href="#">FAQ</a>
+    <a href="#">Doprava a platba</a>
+  </section>
+  <section>
+      <button class="mainButton">
+        <a href="./shopping-cart.html" class="pointerOnHover">
+          Objednat
+        </a>
+      </button>
+    <button class="burger pointerOnHover" id="hamburger">
+      <img src="img/hamburger.svg" alt="hamburger menu">
+    </button>
+  </section>
+</nav>
+<section class="menu" id="menu" style="display: none">
+  <a href="#">FAQ</a>
+  <a href="#">Doprava a platba</a>
+</section>
+<script src="navbar.js"></script>

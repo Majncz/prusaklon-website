@@ -1,0 +1,962 @@
+body {
+    width: 100%;
+    height: 100vh;
+}
+
+:root {
+    --mainPadding: 40px;
+}
+
+.descriptionText {
+    font-size: 19px;
+    font-weight: 400;
+    line-height: 23px;
+}
+
+h2 {
+    font-weight: 800;
+}
+
+main article.heroSection section p {
+    font-weight: 900;
+    color: white;
+}
+
+h2.marginBottom10 {
+    margin-bottom: 10px;
+}
+
+h2.marginBottom15 {
+    margin-bottom: 15px;
+}
+
+main article.calibration {
+    position: relative;
+    overflow: hidden;
+}
+
+main article.calibration > * {
+    z-index: 5;
+}
+
+main article.calibration video.printerCalibrationVideo {
+    width: 100%;
+    position: absolute;
+    z-index: 0;
+}
+
+/* computer layout */
+@media (min-width: 660px) {
+    :root {
+        --mainPadding: 50px;
+        --cellHeight: 420px;
+    }
+
+    sup {
+        font-size: 10px;
+        position: relative;
+        bottom: 10px;
+    }
+
+    h2 {
+        font-size: 68px;
+        font-weight: 600;
+    }
+
+    main {
+        padding-left: var(--mainPadding);
+        padding-right: var(--mainPadding);
+    }
+
+    main article.heroSection {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 0.5fr auto auto auto 0.5fr;
+        column-gap: 10%;
+        row-gap: 22px;
+    }
+
+    main article.heroSection section {
+        grid-column: 1;
+        grid-row: 2;
+    }
+
+    main article.heroSection video.printerFrontVideo {
+        grid-column: 2;
+        grid-row: 1 / 4;
+        width: 100%;
+        height: auto;
+    }
+
+    main article.heroSection h1 {
+        font-size: 31px;
+        margin-top: 40px;
+    }
+
+    main article.heroSection p.descriptionText {
+        width: 40%;
+        grid-column: 1;
+        grid-row: 3;
+    }
+
+    main article.heroSection section p {
+        font-size: 78px;
+    }
+
+    main article.heroSection button {
+        grid-column: 1;
+        grid-row: 4;
+    }
+
+    main article.idealSize {
+        width: 100%;
+        height: var(--cellHeight);
+        display: grid;
+        grid-template-columns: repeat(3, 33.3333%);
+        grid-template-rows: 100%;
+        overflow: hidden;
+        position: relative;
+    }
+
+    main article.idealSize img {
+        height: 600px;
+        position: relative;
+        top: -150px;
+    }
+
+    main article.idealSize p {
+        width: 60%;
+    }
+
+    main article.idealSize h2 {
+        width: 30%;
+    }
+
+    main article.idealSize section:first-child {
+        display: flex;
+        align-items: center;
+    }
+
+    main article.idealSize section:last-child {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+    }
+
+    main section section:has(.support) {
+        display: grid;
+        grid-template-columns: minmax(50%, 50%) minmax(50%, 50%);
+    }
+
+    main article.support {
+        margin-top: 58px;
+    }
+
+    main article.support p {
+        width: 60%;
+    }
+
+    main article.filaments {
+        padding-left: 80px;
+        padding-right: 80px;
+        background-color: #0D0D0D;
+        border-radius: 20px;
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 50px;
+        padding-top: 50px;
+        align-items: center;
+        overflow: hidden;
+    }
+
+    main article.filaments img {
+        width: 150%;
+    }
+
+    main article.filaments h2, main article.filaments p {
+        text-align: left;
+        width: 100%;
+    }
+
+    main article.calibration {
+        height: var(--cellHeight);
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+    }
+
+    main article.calibration h2 {
+        margin-left: 200px;
+        width: 50%;
+        margin-top: 30px;
+    }
+
+    main article.calibration section:has(p) {
+        display: flex;
+        align-items: center;
+        margin-left: 70px;
+        width: 70%;
+    }
+
+    main article.prusaSlicer {
+        display: flex;
+    }
+
+    main article.prusaSlicer section {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    main article.prusaSlicer section p {
+        width: 60%;
+    }
+
+    main article.prusaSlicer img {
+        width: 110%;
+    }
+
+    main section section:has(.fast) {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(50%, 50%));
+    }
+
+    main article.fast {
+        width: 70%;
+    }
+
+    main article.power.mobileHidden {
+        text-align: right;
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+    }
+
+    main article.power.mobileHidden h2 {
+        width: 70%;
+    }
+
+    main article.filamentSensor.mobileHidden {
+        height: var(--cellHeight);
+        display: grid;
+        grid-template-columns: repeat(2, minmax(50%, 50%));
+        grid-template-rows: minmax(100%, 100%);
+    }
+
+    main article.filamentSensor section {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    main article.filamentSensor section:last-child {
+        align-items: center;
+    }
+
+    main article.filamentSensor p {
+        width: 60%;
+    }
+
+    main article.filamentSensor img {
+        width: 60%;
+    }
+
+    main article.filamentSensor h2 {
+        text-align: center;
+    }
+
+    main article.params {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    main article.params > section > a {
+        text-decoration: none;
+        font-size: 68px;
+        font-weight: 600;
+    }
+
+    main article.params section:first-child {
+        display: flex;
+        align-items: center;
+    }
+
+    main article.params table {
+        border-collapse: collapse;
+        border-spacing: 10px 15px;
+    }
+
+    main article.params table td {
+        border: 2px solid rgb(69, 69, 69);
+        padding: 10px;
+        vertical-align: middle;
+    }
+
+    main article.params > section:last-child {
+        display: flex;
+        gap: 28px;
+    }
+
+    main article.params > section:last-child section {
+        display: flex;
+        gap: 6px;
+        align-items: center;
+    }
+
+    main article.params > section:last-child section a {
+        color: var(--accentColor);
+    }
+
+    main section > section:has(.footnote) {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        gap: 80px;
+    }
+
+    main footer {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 80px;
+    }
+
+    main article.footnote {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    main article.footnote p:first-child {
+        font-weight: 500;
+        font-size: 19px;
+    }
+
+    main article.footnote span,  main article.footnote span sup, main article.footnote a {
+        color: var(--accentColor);
+    }
+
+    main article.footnote a {
+        text-decoration: none;
+    }
+
+    main section footer section:has(.logo) {
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+    }
+
+    main footer section.logo {
+        display: flex;
+        align-items: center;
+        gap: 35px;
+    }
+
+    main footer section.logo img {
+        width: 50px;
+    }
+
+    main footer section.logo p {
+        font-size: 50px;
+        font-weight: 700;
+    }
+
+    main footer section.social {
+        display: flex;
+        gap: 20px;
+        align-items: center;
+    }
+
+    main section footer section:has(section.links) {
+        display: flex;
+        flex-direction: column;
+        gap: 21px;
+    }
+
+    main section footer section:has(section.links) section {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+    }
+
+    main section footer section:has(section.links) section p:first-child {
+        font-size: 27px;
+        font-weight: 700;
+    }
+
+    main section footer section:has(section.links) section a,  main footer section:has(section.links) section p:last-child {
+        font-size: 18px;
+        font-weight: 500;
+        text-decoration: none;
+    }
+
+    main section footer section:has(section.links) section a, main footer section:has(section.links) section span {
+        color: var(--accentColor);
+    }
+
+    main footer > section > p {
+        font-size: 12px;
+        font-weight: 500;
+        color: #A3A3A3;
+    }
+}
+
+@media (min-width: 660px) and (max-width: 1090px) {
+    .mainButton {
+        font-weight: 700;
+        font-size: 15px;
+        padding: 5px 12px;
+    }
+
+    .descriptionText {
+        font-size: 15px;
+        line-height: 17px;
+    }
+
+    sup {
+        font-size: 8px;
+        bottom: 7px;
+    }
+
+    h2 {
+        font-size: 41px;
+        font-weight: 600;
+    }
+
+    main article.heroSection h1 {
+        font-size: 18px;
+    }
+
+    main article.heroSection section p {
+        font-size: 46px;
+    }
+
+    main article.heroSection p.descriptionText {
+        width: 80%;
+    }
+
+    main article.idealSize img {
+        height: 330px;
+        position: relative;
+        top: -40px;
+    }
+
+    main article.support p {
+        width: 70%;
+    }
+
+    main article.support h2 {
+        margin-bottom: 7px;
+    }
+
+    main article.filaments {
+        padding-left: var(--cellPadding);
+        padding-right: var(--cellPadding);
+    }
+
+    main article.calibration h2 {
+        margin-left: 100px;
+    }
+
+    main article.prusaSlicer img {
+        width: 55%;
+    }
+
+    main article.fast, main article.power.mobileHidden {
+        width: 100%;
+    }
+
+    main article.power.mobileHidden h2, main article.power.mobileHidden p, main article.fast h2, main article.fast p {
+        width: 80%;
+    }
+
+    main article.power.mobileHidden h2 {
+        width: 100%;
+    }
+
+    main article.params a {
+        font-size: 42px;
+    }
+
+    main article.params table td {
+        font-size: 12px;
+        padding: 7px;
+    }
+
+    main article.params > section:last-child section a {
+        font-size: 10px;
+    }
+
+    main article.params > section:last-child section img {
+        height: 15px;
+    }
+
+    main section > section:has(.footnote), main footer {
+        gap: 50px;
+    }
+
+    main article.footnote, main section footer section:has(.logo) {
+        gap: 15px;
+    }
+
+    main article.footnote p {
+        font-size: 11px;
+    }
+
+    main article.footnote p:first-child {
+        font-size: 16px;
+    }
+
+    main footer section.logo {
+        gap: 18px;
+    }
+
+    main footer section.logo img {
+        width: 30px;
+    }
+
+    main footer section.logo p {
+        font-size: 25px;
+        font-weight: 700;
+    }
+
+    main footer section.social img {
+        height: 20px;
+    }
+
+    main section footer section:has(section.links) {
+        gap: 15px;
+    }
+
+    main section footer section:has(section.links) section {
+        gap: 4px;
+    }
+
+    main section footer section:has(section.links) section p:first-child {
+        font-size: 16px;
+    }
+
+    main section footer section:has(section.links) section a,  main footer section:has(section.links) section p:last-child {
+        font-size: 12px;
+        font-weight: 400;
+    }
+
+    main footer > section > p {
+        font-size: 9px;
+        font-weight: 400;
+    }
+
+    .compHidden {
+        display: none;
+    }
+}
+
+@media (max-width: 710px) and (min-width: 660px) {
+    main article.idealSize img {
+        height: 290px;
+        top: -0px;
+    }
+}
+
+/* mobile layout */
+@media (max-width: 660px) {
+    :root {
+        --mainPadding: 40px;
+    }
+
+    sup {
+        font-size: 10px;
+        position: relative;
+        bottom: 10px;
+    }
+    
+    h2 {
+        font-size: 40px;
+        width: 100%;
+        font-weight: 700;
+    }
+    
+    .nudeCell {
+        padding-left: var(--mainPadding);
+        padding-right: var(--mainPadding);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .tagline {
+        font-weight: 600;
+        font-size: 13px;
+        color: #CFCFCF;
+        width: 100%;
+    }
+    
+    main {
+        gap: 32px;
+    }
+
+    main article.heroSection {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        gap: 20px;
+    }
+
+    main article.heroSection section, main article.heroSection button, main article.heroSection p.descriptionText {
+        margin-left: var(--mainPadding);
+        margin-right: var(--mainPadding);
+    }
+
+    main article.heroSection section p {
+        font-weight: 900;
+        color: white;
+        font-size: 42px;
+    }
+
+    main article.heroSection p.descriptionText {
+        order: 5;
+    }   
+    
+    main article.heroSection video.printerFrontVideo {
+        width: 90%;
+        height: fit-content;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    main article.idealSize {
+        position: relative;
+        background-image: url(../img/printer\ dimensions.png);
+        background-repeat: no-repeat;
+        background-size: 115%;
+        background-position-x: -40px;
+        background-position-y: -170px;
+    }
+    
+    main article.idealSize h2 {
+        margin-bottom: 360px;
+        z-index: 1;
+        position: relative;
+    }
+    
+    main article.idealSize section.compHidden {
+        width: 100%;
+        height: 160px;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        background: linear-gradient(180deg, rgba(13, 13, 13, 0.7) 0%, rgba(13, 13, 13, 0.7) 47.92%, rgba(13, 13, 13, 0) 100%);
+        z-index: 0;
+    }
+
+    main section:has(.support) {
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+    }
+    
+    main article.support h2 {
+        margin-bottom: 10px;
+    }
+    
+    main article.filaments {
+        position: relative;
+    }
+    
+    main article.filaments img {
+        position: absolute;
+        top: 55px;
+        width: 100%;
+    }
+    
+    main article.filaments h2 {
+        margin-bottom: 106px;
+    }
+    
+    main article.calibration {
+        position: relative;
+    }
+    
+    main article.calibration h2 {
+        margin-bottom: 196px;
+        z-index: 1;
+        position: relative;
+    }
+    
+    main article.calibration section:has(p) {
+        position: relative;
+        z-index: 1;
+    }
+    
+    main article.calibration section.compHidden, main article.filamentSensor section.compHidden {
+        width: 100%;
+        height: 160px;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        background: linear-gradient(180deg, rgba(13, 13, 13, 0.7) 0%, rgba(13, 13, 13, 0.7) 47.92%, rgba(13, 13, 13, 0) 100%);
+        z-index: 0;
+    }
+    
+    main article.calibration section:last-child {
+        top: auto;
+        bottom: 0px;
+        height: 200px;
+        background: linear-gradient(180deg, #0D0D0D 0%, rgba(13, 13, 13, 0.9) 47.92%, rgba(13, 13, 13, 0) 100%);
+        transform: matrix(1, 0, 0, -1, 0, 0);
+    }
+    
+    main article.prusaSlicer img {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    
+    main article.filamentSensor {
+        position: relative;
+    }
+    
+    main article.filamentSensor img {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    
+    main article.filamentSensor h2 {
+        z-index: 1;
+    }
+
+    main section:has(.fast) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    main article.fast h2 {
+        font-size: 31px;
+        margin-bottom: 10px;
+    }
+    
+    main article.params {
+        padding-left: var(--mainPadding);
+        padding-right: var(--mainPadding);
+        width: 100%;
+    }
+    
+    main article.params a {
+        color: var(--accentColor);
+        font-weight: 600;
+        font-size: 19px;
+        text-decoration: none;
+    }
+
+    main article.params a:hover {
+        cursor: pointer;
+    }
+    
+    main article.params a img {
+        margin-left: 7px;
+    }
+    
+    main article.params table {
+        border-collapse: separate;
+        border-spacing: 10px 15px;
+        margin: -7px;
+        margin-top: 0px;
+        display: none;
+    }
+    
+    main article.params section {
+        display: flex;
+    }
+    
+    main article.params > section {
+        margin-top: 10px;
+        gap: 20px;
+        flex-wrap: wrap;
+        row-gap: 10px;
+    }
+    
+    main article.params section > section {
+        align-items: center;
+        gap: 9px;
+    }
+    
+    main article.params section p {
+        color: var(--accentColor);
+        font-weight: 600;
+        font-size: 16px;
+    }
+    
+    main article.footnote {
+        padding-left: var(--mainPadding);
+        padding-right: var(--mainPadding);
+        display: flex;
+        flex-direction: column;
+        gap: 22px;
+    }
+    
+    main article.footnote p {
+        font-weight: 400;
+        font-size: 13px;
+    }
+    
+    main article.footnote p:first-child {
+        font-weight: 600;
+        font-size: 17px;
+    }
+    
+    main article.footnote span {
+        color: var(--accentColor);
+    }
+    
+    main article.footnote sup {
+        color: var(--accentColor);
+        bottom: 6px;
+    }
+    
+    main article.footnote a {
+        color: var(--accentColor);
+        text-decoration: none;
+    }
+    
+    main footer {
+        padding-right: var(--mainPadding);
+        padding-left: var(--mainPadding);
+        display: flex;
+        flex-direction: column;
+        gap: 21px;
+    }
+    
+    main footer section.logo, main footer section.social {
+        display: flex;
+        gap: 21px;
+        align-items: center;
+    }
+
+    main footer section:has(.logo) {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    main footer section:has(.links) {
+        display: flex;
+        flex-direction: column;
+        gap: 21px;
+    }
+    
+    main footer section.logo img {
+        width: 30px;
+    }
+    
+    main footer section.logo p {
+        font-weight: 800;
+        font-size: 31px;
+    }
+    
+    main footer section.links, main footer section.textUs {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+    }
+    
+    main footer section.links p, main footer section.textUs p:first-child {
+        font-weight: 800;
+        font-size: 27px;
+    }
+    
+    main footer section.links a {
+        text-decoration: none;
+        color: var(--accentColor);
+        font-weight: 500;
+    }
+    
+    main footer section.textUs p:last-child {
+        font-weight: 500;
+        font-size: 15px;
+    }
+    
+    main footer section.textUs span {
+        color: var(--accentColor);
+    }
+    
+    main footer > section > p:last-child {
+        font-size: 12px;
+        font-weight: 500;
+        color: #A3A3A3;
+    }
+
+    main section > section:has(.footnote), main footer {
+        gap: 20px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .mobileHidden {
+        display: none;
+    }
+
+    .cell {
+        width: 92%;
+    }
+}
+
+@media (max-width: 360px) {
+    main article.idealSize h2 {
+        margin-bottom: 320px;
+    }
+}
+
+@media (max-width: 340px) {
+    main article.idealSize h2 {
+        margin-bottom: 180px;
+    }
+}
+
+main article.calibration video.printerCalibrationVideo {
+    top: -200px;
+    left: -200px;
+}
+
+@media (max-width: 1400px) {
+    main article.calibration video.printerCalibrationVideo {
+        top: -140px;
+        left: -130px;
+    }
+}
+
+@media (max-width: 1160px) {
+    main article.calibration video.printerCalibrationVideo {
+        top: -180px;
+        left: -190px;
+        width: 130%;
+    }
+}
+
+@media (max-width: 1100px) {
+    main article.calibration video.printerCalibrationVideo {
+        top: -100px;
+        left: -190px;
+        width: 130%;
+    }
+}
+
+@media (max-width: 790px) {
+    main article.calibration video.printerCalibrationVideo {
+        top: -50px;
+        left: -150px;
+        width: 140%;
+    }
+}
+
+@media (max-width: 660px) {
+    main article.calibration video.printerCalibrationVideo {
+        top: -150px;
+        left: -290px;
+        width: 270%;
+    }
+}
+
+@media (max-width: 340px) {
+    main article.calibration video.printerCalibrationVideo {
+        top: -90px;
+        left: -250px;
+        width: 280%;
+    }
+}

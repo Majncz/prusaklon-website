@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objednat</title>
+    <link rel="stylesheet" href="./reset.css">
+    <link rel="stylesheet" href="./style-files/site-theme.css">
+    <link rel="stylesheet" href="./style-files/navbar.css">
+    <link rel="stylesheet" href="./style-files/footer.css">
+    <style>
+        section.returningCustomer {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        section.returningCustomer section {
+            display: flex;
+            gap: 0.8rem;
+        }
+
+        section.returningCustomer button:first-child {
+            background-color: black;
+            border: 1px solid var(--accentColor);
+        }
+
+        section.returningCustomer button:first-child a {
+            color: white;
+        }
+
+        form.mainForm {
+            width: 100%;
+            gap: 50px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        section.withoutCell {
+            width: 100%;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: repeat(6, 1fr);
+            padding-left: 50px;
+            padding-right: 50px;
+            column-gap: 3rem;
+            row-gap: 1rem;
+        }
+
+        section.withoutCell div {
+            display: flex;
+            flex-direction: column;
+            gap: 0.3rem;
+        }
+
+        section.withoutCell div label, section.withoutCell div a {
+            color: #DEDEDE;
+            font-size: 0.8rem;
+        }
+
+        section.withoutCell div a {
+            margin-left: auto;
+        }
+
+        section.withoutCell div label span {
+            color: var(--accentColor);
+        }
+
+        input, section.withoutCell div select {
+            border: 1px solid var(--accentColor);
+            border-radius: 8px;
+            height: 100%;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: black;
+            color: white;
+            padding: 0.3rem;
+        }
+
+        section.withoutCell div.checkboxDiv {
+            justify-content: center;
+        }
+
+        section.deliveryCell {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            position: relative;
+        }
+
+        img.topCellLogo {
+            width: 3rem;
+            position: absolute;
+            right: 3rem;
+        }
+
+        section.cuponCell {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        section.cuponCell form {
+            display: flex;
+            flex-direction: row;
+        }
+
+        button[type="submit"] {
+            margin-left: auto;
+        }
+
+        @media (max-width: 660px) {
+            section.withoutCell {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                padding-left: 50px;
+                padding-right: 50px;
+                column-gap: 3rem;
+                row-gap: 1rem;
+            }
+
+            section.cell {
+                align-items: start;
+            }
+
+            img.topCellLogo {
+                width: 2rem;
+                position: absolute;
+                right: 2rem;
+            }
+
+            section.withoutCell {
+                padding-left: 27px;
+                padding-right: 27px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <section class="navBarContainer"></section>
+
+    <main>
+        <section class="container">
+            <a href="./shopping-cart.html" class="backButton">Zpět</a>
+            <section class="cell returningCustomer">
+                <h2>Vracející se zákazník?</h2>
+                <section>
+                    <button class="mainButton"><a href="">Registrovat se</a></button>
+                    <button class="mainButton"><a href="">Přihlásit se</a></button>
+                </section>
+            </section>
+            <form class="mainForm">
+                <section class="withoutCell">
+                    <div>
+                        <label for="fname">Jméno<span>*</span></label>
+                        <input type="text" placeholder="Jan" name="fname">
+                    </div>
+                    <div>
+                        <label for="lname">Příjmení<span>*</span></label>
+                        <input type="text" placeholder="Novák" name="lname">
+                    </div>
+                    <div>
+                        <label for="company">Název firmy</label>
+                        <input type="text" placeholder="Vaše firma s.r.o." name="company">
+                    </div>
+                    <div>
+                        <label for="country">Země<span>*</span></label>
+                        <select name="country" id="country">
+                            <option value="cz" selected>Česká Republika</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="street">Ulice a číslo domu<span>*</span></label>
+                        <input type="text" placeholder="Novákova 18" name="street">
+                    </div>
+                    <div>
+                        <label for="city">Město<span>*</span></label>
+                        <input type="text" name="city" placeholder="Novákov">
+                    </div>
+                    <div>
+                        <label for="psc">PSČ<span>*</span></label>
+                        <input type="text" name="psc" placeholder="100 00">
+                    </div>
+                    <div>
+                        <label for="tel">Telefon<span>*</span></label>
+                        <input type="tel" name="tel" placeholder="123 456 789">
+                    </div>
+                    <div>
+                        <label for="mail">E-mail<span>*</span></label>
+                        <input type="email" name="mail" placeholder="jan.novak@seznam.cz">
+                    </div>
+                    <div></div>
+                    <div class="checkboxDiv">
+                        <a href=""><label for="account">Chcete založit účet?<span> Zaslat kód.</span></label></a>
+                    </div>
+                    <div>
+                        <label for="code">Nechte prázdné pokud nechcete založit účet</label>
+                        <input type="text" name="code" placeholder="Sem vložte kód z e-mailu">
+                        <a href="#"><p>Poslat kód znovu</p></a>
+                    </div>
+                </section>
+                <section class="cell deliveryCell">
+                    <h2>Doprava</h2>
+                    <button class="mainButton"><a href="">Vybrat výdejní místo</a></button>
+                    <p>Výdejní místo nebylo vybráno</p>
+                    <img src="./img/packeta.png" alt="zasilkovna logo" class="topCellLogo">
+                </section>
+                <section class="cell cuponCell">
+                    <h2>Máte slevový kód?</h2>
+                    <input type="text" placeholder="Sem zadejte kód">
+                </section>
+                <button type="submit" class="mainButton">Potvrdit a pokračovat k platbě</button>
+            </form>
+            <section class="footerWrapper"></section>
+        </section>
+    </main>
+    <script src="loadNavbar.js"></script>
+    <script src="loadFooter.js"></script>
+</body>
+</html>

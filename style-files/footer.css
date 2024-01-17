@@ -1,0 +1,74 @@
+section.footerWrapper {
+    width: 100%;
+}
+
+footer {
+    margin-top: 80px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+footer > section {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+footer > section section.logo {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+footer > section section.logo img {
+    width: 40px;
+}
+
+footer > section section.logo p {
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+footer > section section.social {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+footer > section section.links {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+}
+
+footer > section section.links p:first-child, footer > section section.textUs p:first-child {
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+footer > section section.links a, footer > section section.textUs a {
+    color: var(--accentColor);
+}
+
+footer > section > p {
+    font-size: 0.7rem;
+    color: rgb(171, 171, 171);
+}
+
+@media (max-width: 660px) {
+    footer {
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
+    }
+
+    footer > section section.logo img {
+        width: 25px;
+    }
+    
+    footer > section section.logo p {
+        font-size: 1.8rem;
+        font-weight: 700;
+    }
+}
